@@ -80,12 +80,6 @@ body {
     font-size: 22px;
 }
 
-.hero_text_container span {
-    font-family: "Edu AU VIC WA NT Arrows", cursive;
-    font-size: 60px;
-    color: #fff;
-    
-}
 
 /* .logo span{
     color: var(--sub-text-color);
@@ -127,8 +121,11 @@ body {
 
 .header {
     position: relative;
-    height: fit-content;
+    /* height: auto; */
+    /* height: 100vh; */
+    background-color: #000000;
     width: 100%;
+    padding-bottom: 120px;
     /* top: 0; */
 }
 
@@ -151,6 +148,12 @@ body {
     font-weight: 500;
     letter-spacing: 1px;
     margin-bottom: -20px;
+}
+
+.hero_text_container span {
+    font-family: "Edu AU VIC WA NT Arrows", cursive;
+    font-size: 60px;
+    color: #fff;
 }
 
 .hero_text_container h3 {
@@ -181,13 +184,46 @@ body {
     font-size: 18px;
     text-align: center;
 }
+.design_glow_img{
+    overflow: hidden !important;
+}
+.design_glow_img .left {
+    background-image: url("../assets/left\ row\ image.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    filter: blur(60px);
+    /* background-color: #512FEB; */
+    width: 100% ;
+    height: 100%;
+    /* left: 0; */
+    left: -46px;
+    top: 35px;
+    opacity: .55;
+    z-index: 1;
+}
 
+.design_glow_img .right {
+    background-image: url("../assets/right\ row\ image.svg");
+    width: 100%;
+    height: 300px;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 400px;
+    transform: rotate(-10deg);
+    left: 0;
+    background-color: blueviolet;
+    filter: blur(100px);
+    opacity: .3;
+}
 
 
 
 /* ??????????????? marquee in hero ??????????????? */
 .marquee {
     display: flex;
+    z-index: 1;
     width: 45%;
     margin-top: 100px !important;
     margin-bottom: 50px !important;
@@ -210,7 +246,7 @@ body {
     --marquee-item-width: 100px;
     --marquee-item-height: 100px;
     --marquee-duration: 36s;
-    --marquee-items: 6;
+    --marquee-items: 8;
 }
 
 .marquee__item {
@@ -252,6 +288,14 @@ body {
 
 .marquee--8 .marquee__item:nth-of-type(6) {
     --marquee-item-index: 6;
+}
+
+.marquee--8 .marquee__item:nth-of-type(7) {
+    --marquee-item-index: 7;
+}
+
+.marquee--8 .marquee__item:nth-of-type(8) {
+    --marquee-item-index: 8;
 }
 
 @keyframes go {
