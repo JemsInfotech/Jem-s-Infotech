@@ -14,12 +14,19 @@
     --btn-text: #fff;
     --text-color: #fff;
     --sub-text-color: #beb8b8fd;
+    --title-bg-color: #0D0D0D;
+    --border-color: rgb(255, 255, 255, 0.1);
+    --icon-bg: #3F3F3F;
 }
 
 .container {
     max-width: 1250px;
     margin: 0 auto;
     padding: 0 1.5rem;
+}
+
+.space {
+    padding: 50px 0;
 }
 
 body {
@@ -41,9 +48,14 @@ body {
     /* align-items: center; */
 }
 
+.btn a {
+    color: var(--btn-text);
+    text-decoration: none;
+}
 
-.btn:hover {
-    /*  */
+
+.btn a:hover {
+    /* background-color: #d900ff; */
 }
 
 
@@ -53,7 +65,7 @@ body {
 .navbar {
     padding: 20px 40px;
     /* padding: min(2em 5em,8%); */
-    z-index: 1;
+    z-index: 99;
     position: absolute;
     width: 100%;
     top: 0px;
@@ -122,12 +134,13 @@ body {
 .header {
     position: relative;
     /* height: auto; */
-    /* height: 100vh; */
+    /* height: max-content; */
     background-color: #000000;
     width: 100%;
     padding-bottom: 120px;
     /* top: 0; */
 }
+
 
 .hero_text_container {
     color: var(--text-color);
@@ -184,9 +197,11 @@ body {
     font-size: 18px;
     text-align: center;
 }
-.design_glow_img{
-    overflow: hidden !important;
+
+.design_glow_img {
+    overflow-x: hidden !important;
 }
+
 .design_glow_img .left {
     background-image: url("../assets/left\ row\ image.svg");
     position: absolute;
@@ -194,8 +209,8 @@ body {
     overflow-x: hidden;
     filter: blur(60px);
     /* background-color: #512FEB; */
-    width: 100% ;
-    height: 100%;
+    width: 100%;
+    height: 250px;
     /* left: 0; */
     left: -46px;
     top: 35px;
@@ -216,6 +231,7 @@ body {
     background-color: blueviolet;
     filter: blur(100px);
     opacity: .3;
+    z-index: 0;
 }
 
 
@@ -225,11 +241,11 @@ body {
     display: flex;
     z-index: 1;
     width: 45%;
-    margin-top: 100px !important;
-    margin-bottom: 50px !important;
+    margin-top: 0px !important;
+    margin-bottom: 150px !important;
     justify-content: center;
     align-items: center;
-    top: 120px;
+    top: 220px;
     margin: 0 auto;
     block-size: var(--marquee-item-height);
     margin-block: var(--marquee-item-height);
@@ -250,6 +266,7 @@ body {
 }
 
 .marquee__item {
+    margin: 0;
     --marquee-item-offset: max(calc(var(--marquee-item-width) * var(--marquee-items)),
             calc(100% + var(--marquee-item-width)));
     --marquee-delay: calc(var(--marquee-duration) / var(--marquee-items) * (var(--marquee-items) - var(--marquee-item-index)) * -1);
@@ -302,4 +319,141 @@ body {
     to {
         inset-inline-start: calc(var(--marquee-item-width) * -1);
     }
+}
+
+/*? =========== benefits Section ============ */
+
+.benefits {
+    background-color: #000000;
+    width: 100%;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+
+.title .title_btn {
+    font-family: "Outfit", sans-serif;
+    background-color: var(--title-bg-color);
+    color: var(--sub-text-color);
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    letter-spacing: 1px;
+}
+
+.title_name h3 {
+    color: var(--text-color);
+    font-size: 45px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 65px;
+    /* background-color: #512FEB !important; */
+}
+
+/* hover title s */
+.hover-underline {
+    font-size: 2rem;
+    color: #ffffff;
+    position: relative;
+    display: flex;
+    justify-self: center;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #1100ff, #d900ff);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+    top: -5px;
+    transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+    transform: scaleX(1);
+}
+
+/* hover title e */
+
+
+.benefits_card {
+    max-width: 1200px;
+    display: grid;
+    width: 100%;
+    gap: 30px;
+    /* flex: none; */
+    grid-template-columns: repeat(3, minmax(50px, 1fr));
+    grid-template-rows: repeat(1, min-content);
+    align-items: center;
+    justify-self: center;
+}
+
+.b_card {
+    position: relative;
+    background-color: #0F0F0F;
+    border: 1px solid var(--border-color);
+    border-radius: 35px;
+    padding: 20px 30px;
+    overflow: hidden;
+}
+
+.b_card .card_icon {
+    background-color: var(--icon-bg);
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}
+
+.b_card .card_text {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card_text .c-name h3 {
+    font-size: 22px;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+.card_text .c-des p {
+    font-size: 16px;
+    color: var(--sub-text-color);
+    font-weight: 400;
+    line-height: 1.4em;
+    letter-spacing: -.02em;
+}
+
+.c_glow_box {
+    position: absolute;
+    background-color: rgb(18, 31, 221);
+    filter: blur(60px);
+    width: 70px;
+    height: 70px;
+    top: 0;
+    right: 0;
 }

@@ -6,7 +6,7 @@
     /* Navigation */
 
     .container {
-        max-width: 520px;
+        max-width: 420px;
         margin: 0 auto;
         padding: 0 1em;
     }
@@ -20,7 +20,7 @@
     }
 
     .nav_container {
-        padding: 10px 9px;
+        padding: 13px 9px;
     }
 
     .btn {
@@ -55,19 +55,19 @@
     }
 
     .hero_text_container h1 {
-        font-size: 30px;
+        font-size: 35px;
         margin-bottom: 0px;
     }
 
     .hero_text_container span {
         /* font-family: "Edu AU VIC WA NT Arrows", cursive; */
-        font-size: 30px;
+        font-size: 35px;
         /* color: #fff; */
     }
 
     .hero_text_container h3 {
         color: var(--text-color);
-        font-size: 28px;
+        font-size: 25px;
         font-weight: 400;
     }
 
@@ -109,8 +109,21 @@
         opacity: .55;
         z-index: 1;
     }
-    .design_glow_img .right{
+
+    .design_glow_img .right {
         transform: rotate(0deg);
+    }
+
+    /* Benifits */
+
+    .title_name h3 {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    .benefits_card {
+        grid-template-columns: repeat(1, minmax(50px, 3fr));
+        grid-template-rows: repeat(3, min-content);
     }
 
 }
@@ -134,7 +147,7 @@
     }
 
     .nav_container {
-        padding: 10px 10px;
+        padding: 15px 10px;
     }
 
     .btn {
@@ -200,4 +213,10 @@
         z-index: 1;
     }
 
+    .benefits_card {
+        max-width: 828px;
+
+        grid-template-columns: repeat(1, minmax(50px, 3fr));
+        grid-template-rows: repeat(3, min-content);
+    }
 }
