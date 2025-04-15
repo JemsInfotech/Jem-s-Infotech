@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rareblocks Footer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0f0f10;
+            color: #fff;
+        }
+
+        .footer {
+            padding: 80px 24px 60px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .subscribe-section {
+            position: relative;
+            background-color: #1a1a1a;
+            border-radius: 28px;
+            padding: 48px 40px;
+            margin-bottom: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .subscribe-section::before {
+            content: "";
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(60deg, #00ffaa, #0096ff, #ffc800, #ff00cc);
+            background-size: 300% 300%;
+            border-radius: 32px;
+            z-index: -1;
+            animation: glowborder 6s ease infinite;
+            filter: blur(4px);
+        }
+
+        @keyframes glowborder {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .subscribe-title {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.4;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .subscribe-form {
+            display: flex;
+            background-color: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            max-width: 440px;
+            flex: 1;
+            transition: all 0.3s ease;
+        }
+
+        .subscribe-form input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 14px 16px;
+            font-size: 16px;
+            border-radius: 16px 0 0 16px;
+        }
+
+        .subscribe-form button {
+            padding: 0 24px;
+            background-color: #000;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 16px 16px 0;
+            transition: all 0.3s ease;
+        }
+
+        .subscribe-form button:hover {
+            background-color: #333;
+            transform: scale(1.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 16px;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+            font-size: 15px;
+            opacity: 0.9;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .footer-column ul li:hover {
+            opacity: 1;
+            color: #00ffaa;
+            background: linear-gradient(90deg, #00ffaa22, #0096ff22);
+            padding-left: 8px;
+            border-radius: 6px;
+            text-shadow: 0 0 5px #00ffaa88;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 16px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            font-size: 24px;
+            color: #fff;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #00ffaa;
+            transform: scale(1.2);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #b0b0b0;
+        }
+
+        .footer-bottom .social-icons {
+            margin-top: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .subscribe-section {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                padding: 32px 24px;
+            }
+
+            .subscribe-form {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .subscribe-title {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="subscribe-section">
+                <div class="subscribe-title">
+                    Grow your business fast with <br />Rareblocks UI Kit.
+                </div>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter email address" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li>About</li>
+                        <li>Features</li>
+                        <li>Works</li>
+                        <li>Career</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Help</h4>
+                    <ul>
+                        <li>Customer Support</li>
+                        <li>Delivery Details</li>
+                        <li>Terms & Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li>Free eBooks</li>
+                        <li>Development Tutorial</li>
+                        <li>How to – Blog</li>
+                        <li>Youtube Playlist</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Links</h4>
+                    <ul>
+                        <li>Free eBooks</li>
+                        <li>Development Tutorial</li>
+                        <li>How to – Blog</li>
+                        <li>Youtube Playlist</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://wa.me" target="_blank" class="fab fa-whatsapp"></a>
+                <a href="https://instagram.com" target="_blank" class="fab fa-instagram"></a>
+                <a href="https://linkedin.com" target="_blank" class="fab fa-linkedin"></a>
+                <a href="https://facebook.com" target="_blank" class="fab fa-facebook"></a>
+            </div>
+
+            <!-- Footer Bottom (Copyright) -->
+            <div class="footer-bottom">
+                <p>© Copyright 2021, All Rights Reserved</p>
+                <div class="social-icons">
+                    <a href="https://twitter.com" target="_blank" class="fab fa-twitter"></a>
+                    <a href="https://github.com" target="_blank" class="fab fa-github"></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

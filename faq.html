@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campground FAQs</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #2e2e2e;
+            color: #fff;
+        }
+
+        .hero {
+            background: url('https://img.freepik.com/free-photo/majestic-mountains-covered-with-snow-under-blue-sky-sunlight_181624-41207.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 0.5em 1em;
+            border-radius: 10px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+        }
+
+        .faq-item {
+            background: #444;
+            margin: 0.5em 0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            transform-origin: top;
+        }
+
+        .faq-question {
+            padding: 1em;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #555;
+            transform: scale(1.01);
+        }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            font-size: 1.5em;
+            transition: transform 0.4s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding: 0 1em;
+            background: #333;
+            border-top: 1px solid #555;
+            transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            opacity: 1;
+            padding: 1em;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #ccc;
+            margin: 4em 0 1em;
+        }
+
+        .footer a {
+            color: #fcb900;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="faq">
+
+        <div class="hero">
+            <h1>Campground FAQs</h1>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">How can I make a booking?</div>
+                <div class="faq-answer">You can book directly through our website by choosing your dates and selecting
+                    your preferred accommodation.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Why do you need my email address and contact number?</div>
+                <div class="faq-answer">We use this information to send your booking confirmation and contact you if
+                    there are any changes.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I reserve my favourite campsite or accommodation?</div>
+                <div class="faq-answer">Yes, you can select specific sites or accommodations while booking online if
+                    they are available.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What are the benefits of an online booking system?</div>
+                <div class="faq-answer">Booking online is fast, secure, and convenient. You can check availability in
+                    real-time and receive instant confirmation.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What do I need to make an online booking?</div>
+                <div class="faq-answer">You need a valid email address, a contact number, and a debit or credit card for
+                    payment.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Image from <a href="https://www.freepik.com" target="_blank">Freepik</a><br />
+            This site was created with the <a href="https://nicepage.com" target="_blank">Nicepage</a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isOpen = item.classList.contains('active');
+
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                // Open the clicked one if it wasn't already open
+                if (!isOpen) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
