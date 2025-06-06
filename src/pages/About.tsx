@@ -130,6 +130,7 @@ const About = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in-up">
               About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent gradient-text">Jem's Infotech</span>
             </h1>
+            
             <p className="text-xl text-gray-600 max-w-6xl mx-auto animate-fade-in-up animate-stagger-2">
               {/* We're a team of passionate professionals dedicated to creating digital solutions that drive business growth and enhance user experiences. */}
               At Jem's Infotech, we specialize in crafting powerful and scalable web and mobile applications tailored to meet your business needs. Our team of expert developers turns ideas into fully functional digital solutions that drive results and enhance user experiences. Whether you need a custom website, a dynamic web app, or a cross-platform mobile application, we focus on delivering clean, efficient, and high-performing solutions that help your business grow in the digital world.We’re not just building software — we’re building digital experiences that are secure, fast, and future-ready.

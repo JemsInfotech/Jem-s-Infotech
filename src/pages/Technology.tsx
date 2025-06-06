@@ -46,14 +46,14 @@ const Technology = () => {
       { name: "Ionic", description: "Cross-platform mobile app development", logo: "⚡" },
       { name: "Xamarin", description: "Microsoft's mobile app development platform", logo: "💜" }
     ],
-    cms: [
-      { name: "WordPress", description: "Popular content management system", logo: "📝" },
-      { name: "Shopify", description: "E-commerce platform", logo: "🛒" },
-      { name: "Drupal", description: "Open-source content management framework", logo: "💧" },
-      { name: "Magento", description: "E-commerce platform written in PHP", logo: "🔶" },
-      { name: "Contentful", description: "Headless content management system", logo: "📄" },
-      { name: "Strapi", description: "Open-source headless CMS", logo: "🚀" }
-    ],
+    // cms: [
+    //   { name: "WordPress", description: "Popular content management system", logo: "📝" },
+    //   { name: "Shopify", description: "E-commerce platform", logo: "🛒" },
+    //   { name: "Drupal", description: "Open-source content management framework", logo: "💧" },
+    //   { name: "Magento", description: "E-commerce platform written in PHP", logo: "🔶" },
+    //   { name: "Contentful", description: "Headless content management system", logo: "📄" },
+    //   { name: "Strapi", description: "Open-source headless CMS", logo: "🚀" }
+    // ],
     design: [
       { name: "Figma", description: "Collaborative design tool", logo: "🎨" },
       { name: "Adobe XD", description: "Vector-based design tool", logo: "🔮" },
@@ -171,11 +171,11 @@ const Technology = () => {
           />
 
           {/* CMS Technologies */}
-          <CategoryCard
+          {/* <CategoryCard
             title="Content Management Systems"
             items={technologies.cms}
             gradient="from-orange-500 to-red-500"
-          />
+          /> */}
 
           {/* Design Tools */}
           <CategoryCard
